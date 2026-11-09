@@ -1,0 +1,1448 @@
+/* --- Profile & Auth Styles --- */
+.profile-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.auth-tabs {
+  display: flex;
+  background-color: var(--bg-primary);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.auth-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 8px;
+  font-size: 0.85Nrem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.auth-tab.active {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.input-field-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.auth-input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.auth-submit-btn {
+  background-color: var(--struct-secondary);
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition:
+    opacity 0.2s ease,
+    transform 0.1s ease;
+  margin-top: 6px;
+}
+
+.auth-submit-btn:hover {
+  opacity: 0.9;
+}
+
+.auth-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.logout-btn {
+  background-color: #dc2626; /* Clean soft red for sign out */
+  width: 100%;
+}
+
+.auth-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+}
+
+.auth-alert.error {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.auth-alert.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.profile-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--struct-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(184, 84, 58, 0.3);
+}
+/* --- Profile & Auth View Styles --- */
+
+.auth-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.auth-tabs {
+  display: flex;
+  background-color: var(--bg-primary);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.auth-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.auth-tab.active {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.input-field-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.auth-input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.auth-submit-btn {
+  background-color: var(--struct-secondary);
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition:
+    opacity 0.2s ease,
+    transform 0.1s ease;
+  margin-top: 6px;
+}
+
+.auth-submit-btn:hover {
+  opacity: 0.9;
+}
+
+.auth-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.logout-btn {
+  background-color: #dc2626;
+  width: 100%;
+}
+
+.auth-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+}
+
+.auth-alert.error {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.auth-alert.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.profile-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--struct-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(184, 84, 58, 0.3);
+}
+
+/* Mode Switcher */
+.mode-switcher-container {
+  display: flex;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px;
+  border-radius: 12px;
+  gap: 4px;
+  margin-top: 10px;
+}
+.mode-tab-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+.mode-tab-btn.active {
+  background-color: var(--bg-card, #ffffff);
+  color: var(--accent-color, #b8543a);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* User Info Card overrides */
+.profile-user-info-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px 0;
+  background: var(--bg-card, #ffffff);
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #eee);
+}
+.profile-avatar-wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--accent-color, #b8543a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.profile-info-text-wrap {
+  overflow: hidden;
+  flex: 1;
+}
+.profile-signed-in-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+.profile-email-text {
+  margin: 2px 0 0 0;
+  word-break: break-all;
+  font-size: 0.9rem;
+}
+
+/* Consumer Mode Stats */
+.consumer-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.stat-box-card {
+  background: var(--bg-card, #ffffff);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #eee);
+  text-align: center;
+}
+.stat-icon-margin {
+  margin-bottom: 4px;
+}
+.stat-box-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+.stat-box-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Settings-like Activity Hub */
+.settings-activity-hub {
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, #eee);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.settings-hub-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color, #eee);
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.settings-row-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color, #eee);
+  background-color: transparent;
+  transition: background-color 0.2s;
+}
+.settings-row-item.active-row {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.settings-row-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.settings-row-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.settings-row-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.settings-row-meta {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+.chevron-icon {
+  color: var(--text-secondary);
+  transition: transform 0.2s;
+}
+.chevron-icon.rotated {
+  transform: rotate(90deg);
+}
+
+/* Drawers inside Settings Hub */
+.settings-drawer-content {
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.01);
+  border-bottom: 1px solid var(--border-color, #eee);
+}
+.drawer-loading-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.drawer-vouchers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.drawer-voucher-item {
+  padding: 8px;
+  border: 1px solid var(--accent-color, #b8543a);
+  border-radius: 6px;
+  background: var(--bg-card, #fff);
+}
+.drawer-voucher-biz {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--accent-color, #b8543a);
+}
+.drawer-voucher-promo {
+  font-size: 0.8rem;
+  margin: 2px 0;
+}
+.drawer-voucher-pill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.drawer-review-item-title {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.drawer-review-item-body {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.favorites-list-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.favorite-spot-row {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Business Mode Dashboard */
+.merchant-dashboard-container {
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--accent-color, #b8543a);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.merchant-dashboard-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  margin: 0 0 12px 0;
+  color: var(--accent-color, #b8543a);
+}
+.merchant-empty-wrapper {
+  text-align: center;
+  padding: 20px 0;
+}
+.merchant-empty-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+.merchant-biz-name {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.merchant-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.merchant-stat-box {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+.merchant-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+.merchant-stat-val-row {
+  font-size: 0.95rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.merchant-asset-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.asset-form-heading {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+.update-status-msg {
+  font-size: 0.75rem;
+}
+.error-text {
+  color: #ef4444;
+}
+.success-text {
+  color: #10b981;
+}
+.asset-input-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+.asset-text-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color, #eee);
+  font-size: 0.85rem;
+}
+
+/* Utility Helpers */
+.btn-pad-custom {
+  padding: 10px 20px;
+}
+.btn-secondary-custom {
+  padding: 10px 20px;
+  background-color: var(--struct-secondary, #6b7280);
+}
+.btn-sm-text {
+  font-size: 0.85rem;
+}
+.btn-mt-custom {
+  padding: 8px;
+  margin-top: 4px;
+}
+.btn-full-width {
+  width: 100%;
+}
+.profile-subtitle-muted {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 4px 0 12px 0;
+}
+.profile-logged-out-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--bg-card, #ffffff);
+  border-radius: 16px;
+  border: 1px solid var(--border-color, #eee);
+}
+.logged-out-icon {
+  opacity: 0.4;
+  margin-bottom: 12px;
+}
+.logged-out-title {
+  margin: 0 0 6px 0;
+}
+.logged-out-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+.logged-out-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* --- Logged Out State --- */
+.profile-welcome-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 4px 0 16px 0;
+}
+
+.profile-logged-out-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--bg-card, #ffffff);
+  border-radius: 16px;
+  border: 1px solid var(--border-color, #eee);
+}
+
+.profile-logged-out-icon {
+  opacity: 0.4;
+  margin-bottom: 12px;
+}
+
+.profile-logged-out-title {
+  margin: 0 0 6px 0;
+  color: var(--text-primary);
+}
+
+.profile-logged-out-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.profile-logged-out-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.profile-auth-btn {
+  padding: 10px 20px;
+}
+
+.profile-auth-btn.secondary {
+  background-color: var(--struct-secondary);
+}
+
+/* --- Centered Profile Header (Matching Reference Design) --- */
+.profile-centered-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 0 10px 0;
+}
+
+.profile-avatar-circle-lg {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: #d6d3d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 2px solid var(--border-color, #e5e0d8);
+}
+
+.profile-avatar-circle-lg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-username-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profile-location-subtitle {
+  margin: 3px 0 0 0;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* --- Sliding Underline Mode Switcher (User | Business) --- */
+.profile-underline-tabs {
+  position: relative;
+  display: flex;
+  border-bottom: 1.5px solid var(--border-color, #e2dcd5);
+  margin: 12px 0 18px 0;
+}
+
+.profile-underline-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.profile-underline-tab.active {
+  color: var(--accent-color, #a8653b);
+  font-weight: 700;
+}
+
+.profile-tab-indicator {
+  position: absolute;
+  bottom: -1.5px;
+  left: 0;
+  width: 50%;
+  height: 3px;
+  background-color: var(--accent-color, #a8653b);
+  border-radius: 3px 3px 0 0;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-tab-indicator.right {
+  transform: translateX(100%);
+}
+
+/* --- Warm Tinted Container (User Community & Merchant Analytics) --- */
+.profile-tinted-section {
+  background-color: rgba(217, 119, 6, 0.08);
+  border: 1px solid rgba(168, 101, 59, 0.35);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+.profile-tinted-heading {
+  margin: 0 0 12px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profile-tinted-heading.centered {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.profile-stats-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.profile-stat-white-box {
+  background-color: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, #e6e1da);
+  border-radius: 12px;
+  padding: 12px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.profile-stat-white-box:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-stat-white-box.active-box {
+  border-color: var(--accent-color, #a8653b);
+  box-shadow: 0 0 0 1px var(--accent-color, #a8653b);
+}
+
+.profile-stat-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.profile-stat-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profile-stat-paren-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* --- Expandable Detail Drawer Inside Community / Account --- */
+.profile-drawer-panel {
+  margin-top: 12px;
+  background-color: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, #e6e1da);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--border-color, #eee);
+  padding-bottom: 6px;
+}
+
+.profile-drawer-empty {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+  text-align: center;
+  padding: 6px 0;
+}
+
+.profile-drawer-item {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background-color: var(--bg-primary, #faf6f0);
+  border: 1px solid var(--border-color, #eee);
+  font-size: 0.8rem;
+}
+
+.profile-drawer-item-title {
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-drawer-item-sub {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.profile-voucher-code-pill {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background-color: rgba(168, 101, 59, 0.12);
+  color: var(--accent-color);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/* --- Account & Business Community Grouped List Card --- */
+.profile-section-heading {
+  margin: 0 0 8px 2px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profile-list-card {
+  background-color: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, #e2dcd5);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.profile-list-card-header {
+  padding: 10px 16px;
+  background-color: rgba(217, 119, 6, 0.06);
+  border-bottom: 1px solid var(--border-color, #e2dcd5);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profile-list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border-color, #eee);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.profile-list-row:last-child {
+  border-bottom: none;
+}
+
+.profile-list-row:hover {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+.profile-list-row-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.profile-list-drawer {
+  padding: 12px 16px;
+  background-color: var(--bg-primary, #faf6f0);
+  border-bottom: 1px solid var(--border-color, #eee);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* --- Merchant Tools: Storefront, Digital Menu CRUD & Danger Zone --- */
+.merchant-manager-card {
+  background-color: var(--bg-card, #ffffff);
+  border: 1px solid var(--border-color, #e2dcd5);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.merchant-manager-title {
+  margin: 0 0 10px 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.merchant-form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.merchant-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.merchant-input-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.merchant-text-input,
+.merchant-select-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #ddd);
+  background-color: var(--bg-primary, #faf6f0);
+  color: var(--text-primary);
+  font-size: 0.84rem;
+  box-sizing: border-box;
+}
+
+.merchant-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.merchant-status-msg {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.merchant-status-msg.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.merchant-status-msg.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.merchant-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.merchant-menu-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color, #eee);
+  background-color: var(--bg-primary, #faf6f0);
+}
+
+.merchant-menu-item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.merchant-menu-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: #e5e0d8;
+}
+
+.merchant-menu-text {
+  overflow: hidden;
+}
+
+.merchant-menu-name {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.merchant-menu-meta {
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+}
+
+.merchant-icon-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+}
+
+/* --- Unregister Business Danger Box --- */
+.unregister-danger-card {
+  background-color: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.unregister-danger-title {
+  margin: 0 0 4px 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.unregister-danger-desc {
+  margin: 0 0 10px 0;
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+}
+
+.unregister-btn-outline {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ef4444;
+  background: transparent;
+  color: #ef4444;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.unregister-confirm-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.unregister-confirm-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.unregister-cancel-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #ccc);
+  background-color: var(--bg-card, #ffffff);
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chevron-rotated {
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
+/* --- File Upload Controls & Previews --- */
+.merchant-file-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.merchant-file-label-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px dashed var(--accent-color, #a8653b);
+  background-color: var(--bg-primary, #faf6f0);
+  color: var(--accent-color, #a8653b);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  flex: 1;
+}
+
+.merchant-file-label-btn:hover {
+  background-color: rgba(168, 101, 59, 0.08);
+}
+
+.merchant-file-input-hidden {
+  display: none;
+}
+
+.merchant-upload-preview-thumb {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border-color, #ddd);
+  flex-shrink: 0;
+  background-color: #e5e0d8;
+}
+
+.merchant-upload-preview-banner {
+  width: 72px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border-color, #ddd);
+  flex-shrink: 0;
+  background-color: #e5e0d8;
+}
+
+/* --- Business Settings Dropdown Additions (Menu Edit & Gallery Manager) --- */
+.merchant-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.merchant-icon-btn.edit {
+  color: var(--accent-color, #a8653b);
+}
+
+.merchant-icon-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.merchant-edit-dish-box {
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--bg-card, #ffffff);
+  border: 1px solid var(--accent-color, #a8653b);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.merchant-edit-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.merchant-save-sm-btn {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--accent-color, #a8653b);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.merchant-cancel-sm-btn {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #ccc);
+  background-color: var(--bg-primary, #faf6f0);
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Establishment Gallery Grid inside Business Settings --- */
+.merchant-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.merchant-gallery-thumb-card {
+  position: relative;
+  width: 100%;
+  height: 78px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color, #ddd);
+  background-color: #e5e0d8;
+}
+
+.merchant-gallery-thumb-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.merchant-gallery-delete-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(239, 68, 68, 0.9);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.merchant-gallery-delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* --- Pending Admin Verification Card in Business Mode --- */
+.merchant-pending-card {
+  background-color: var(--bg-card, #ffffff);
+  border: 1.5px dashed #d97706;
+  border-radius: 16px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.merchant-pending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: rgba(245, 158, 11, 0.14);
+  color: #d97706;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.merchant-pending-title {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.merchant-pending-sub {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.merchant-pending-meta {
+  width: 100%;
+  background-color: var(--bg-primary, #faf6f0);
+  border: 1px solid var(--border-color, #e6e1da);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.merchant-pending-actions {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.merchant-refresh-status-btn {
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--accent-color, #a8653b);
+  background-color: var(--accent-color, #a8653b);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.merchant-cancel-app-btn {
+  padding: 9px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  background-color: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* --- Check Approval Status & Inline Withdraw Confirmation --- */
+.merchant-approval-feedback {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  background-color: rgba(217, 119, 6, 0.12);
+  color: #d97706;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+}
+
+.merchant-approval-feedback.approved {
+  background-color: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.merchant-withdraw-confirm-box {
+  width: 100%;
+  background-color: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.merchant-withdraw-confirm-text {
+  margin: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #ef4444;
+}
